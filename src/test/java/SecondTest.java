@@ -1,7 +1,12 @@
+import com.codeborne.selenide.conditions.Hidden;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import com.codeborne.selenide.Configuration;
 import org.openqa.selenium.By;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.firefox.FirefoxOptions;
+
+import java.awt.*;
 
 import static com.codeborne.selenide.Selenide.*;
 
@@ -11,6 +16,8 @@ public class SecondTest {
         static void setup() {
             Configuration.browser = "firefox";
             Configuration.startMaximized = true;
+            Configuration.headless =true;
+
         }
 
         @Test
